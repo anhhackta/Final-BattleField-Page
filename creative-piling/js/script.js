@@ -12,6 +12,8 @@ $(window).on("load", function () {
 
     Showcase()
 
+
+
 /* ===================================
     Page Piling
 ====================================== */
@@ -95,18 +97,31 @@ jQuery(function ($) {
     });
 
     $(".scroll").on("click", function (event) {
-        event.preventDefault();
-        $("html,body").animate({
-            scrollTop: $(this.hash).offset().top - 60
-        }, 1200);
+        // Kiểm tra xem thẻ a có chứa href không (link thật sự)
+        if ($(this).attr("href")) {
+            // Nếu có href (link), không ngăn hành động mặc định
+            return true;
+        } else {
+            // Ngược lại, ngăn hành động mặc định để thực hiện cuộn
+            event.preventDefault();
+            $("html,body").animate({
+                scrollTop: $(this.hash).offset().top - 60
+            }, 1200);
+        }
     });
-
+    
     $(".slider-btn").on("click", function (event) {
-        event.preventDefault();
-        $("html,body").animate({
-            scrollTop: $(this.hash).offset().top - 60
-        }, 1200);
+        // Kiểm tra nếu có href, thì mở link
+        if ($(this).attr("href")) {
+            return true;
+        } else {
+            event.preventDefault();
+            $("html,body").animate({
+                scrollTop: $(this.hash).offset().top - 60
+            }, 1200);
+        }
     });
+    
 
 /* ===================================
     Side Menu
@@ -713,3 +728,5 @@ function Showcase() {
         TweenMax.to($(".showcase-counter, .swiper-pagination-bullet-active .counter, .arrows-wrap"), 0.3, {force3D:true, opacity:1, delay:0.15, ease:Power2.easeOut});
     }
 }//End Showcase
+
+
