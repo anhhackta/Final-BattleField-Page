@@ -2138,3 +2138,88 @@ footer.bg-black2 {
         pointer-events: initial;
     }
 }
+
+
+.lang-menu {
+    width: 150px;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 25px;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Đặt nút dropdown bên phải nút side menu */
+    margin-left: 20px; /* Cách một khoảng */
+}
+
+.lang-menu .selected-lang {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.lang-menu .selected-lang:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url('https://flagsapi.com/US/shiny/32.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+}
+
+.lang-menu ul li {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu ul li a {
+    text-decoration: none;
+    width: 125px;
+    padding: 5px 10px;
+    display: block;
+}
+
+.lang-menu ul li:hover {
+    background-color: #f2f2f2;
+}
+
+.lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.vi:before {
+    background-image: url('https://flagsapi.com/VN/shiny/32.png');
+}
+
+.en:before {
+    background-image: url('https://flagsapi.com/US/shiny/32.png');
+}
+
+.jp:before {
+    background-image: url('https://flagsapi.com/JP/shiny/32.png');
+}
+
