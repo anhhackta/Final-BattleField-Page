@@ -116,4 +116,4 @@ Có nhiều cách để chạy dự án web này:
 
 ## Giấy phép
 
-© 2025 Game Development VTC. Quản lý bởi [Zon](https://vtc.edu.vn/)
+© 2025 Game Development VTC. Quản lý bởi [Zon](https://www.facebook.com/anhhackta.official)
